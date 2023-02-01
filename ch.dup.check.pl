@@ -10,7 +10,7 @@ use Term::ANSIColor;
 # define: Abrufzeichen to check / against; file extensions for input; library in use #
 ######################################################################################
 
-my $wab_1 = "ZDB-54-DH";
+my $wab_1 = "ZDB-54-DH*";
 my $wab_2 = "WISO";
 
 my $ext_1 = "*.fix.*u";     # to address unique matches
@@ -159,7 +159,7 @@ foreach my $ffile (@finfiles) {
         exit;
         }
     else {
-    print color("green"), "RESULT:", color("reset")," duplicate check finished. No duplicates detected. Proceed without duplicate deletion!\n";
+    print color("green"), "RESULT:", color("reset")," duplicate check finished. No duplicates between $wab_1 and $wab_2 detected. Proceed without duplicate deletion!\n";
     exit;
     }
 }
