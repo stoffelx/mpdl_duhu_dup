@@ -55,8 +55,8 @@ foreach my $file (@infiles) {
 # fetch ALEPH Ids from input files                                                   #
 ######################################################################################
 
-open my $ofile_1, '>' , "all-u.sys" || die 'unable to write output file all-u.sys';
-open my $ofile_2, '>' , "dup.sys" || die 'unable to write output file dup.sys';
+open (my $ofile_1, '>' , "all-u.sys") || die 'unable to write output file all-u.sys';
+open (my $ofile_2, '>' , "dup.sys") || die 'unable to write output file dup.sys';
 
 (my $proc_ext_1 = $ext_1) =~ s/\./\\./g;
 $proc_ext_1 =~ s/\*/\.\*/g;
